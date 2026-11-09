@@ -1,0 +1,96 @@
+.project-directory {
+  max-width: 960px;
+  margin-block: clamp(24px, 4vw, 52px) 32px;
+}
+
+.project-section + .project-section {
+  margin-top: 34px;
+}
+
+.project-section h2 {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+  font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-grid--plugins {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.project-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  gap: 8px;
+}
+
+.project-card {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 132px;
+  padding: 16px 10px;
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.project-card:is(:hover, :focus-visible) {
+  border-color: var(--accent-strong);
+  background: var(--panel-2);
+  color: var(--accent-strong);
+}
+
+.project-icon {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.project-icon--sprite {
+  image-rendering: pixelated;
+}
+
+.project-card h3 {
+  margin: 0;
+  font: 700 1.1rem Georgia, "Times New Roman", serif;
+  overflow-wrap: anywhere;
+}
+
+.project-installs {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@container toolkit-page (max-width: 640px) {
+  .project-grid--plugins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@container toolkit-page (max-width: 360px) {
+  .project-grid { grid-template-columns: minmax(0, 1fr); }
+}
