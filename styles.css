@@ -1,5 +1,5 @@
 .project-directory {
-  max-width: 960px;
+  max-width: 70rem;
   margin-block: clamp(24px, 4vw, 52px) 32px;
 }
 
@@ -15,15 +15,11 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
+  gap: 12px;
   margin: 14px 0 0;
   padding: 0;
   list-style: none;
-}
-
-.project-grid--plugins {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .project-entry {
@@ -31,19 +27,20 @@
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  max-width: 12rem;
   gap: 8px;
 }
 
 .project-card {
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   width: 100%;
-  min-height: 132px;
-  padding: 16px 10px;
+  aspect-ratio: 1;
+  min-height: 0;
+  padding: 8px;
   color: var(--text);
   text-align: center;
   text-decoration: none;
@@ -68,7 +65,15 @@
 
 .project-card h3 {
   margin: 0;
-  font: 700 1.1rem Georgia, "Times New Roman", serif;
+  font: 700 1rem/1.1 Georgia, "Times New Roman", serif;
+  overflow-wrap: anywhere;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.25;
   overflow-wrap: anywhere;
 }
 
@@ -85,12 +90,4 @@
   overflow: hidden;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-@container toolkit-page (max-width: 640px) {
-  .project-grid--plugins { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-
-@container toolkit-page (max-width: 360px) {
-  .project-grid { grid-template-columns: minmax(0, 1fr); }
 }
