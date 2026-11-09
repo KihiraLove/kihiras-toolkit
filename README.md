@@ -1,5 +1,8 @@
 # Kihira's Toolkit
 
+[![Deploy GitHub Pages](https://github.com/KihiraLove/kihiras-toolkit/actions/workflows/pages.yml/badge.svg)](https://github.com/KihiraLove/kihiras-toolkit/actions/workflows/pages.yml)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-Support%20me-29ABE0?logo=ko-fi&logoColor=white)](https://ko-fi.com/KihiraLove)
+
 A static directory of KihiraLove's OSRS tools, RuneLite plugins, and clan projects. [Open the toolkit](https://kihiralove.github.io/kihiras-toolkit/).
 
 ## Run locally
